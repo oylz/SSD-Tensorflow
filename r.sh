@@ -11,11 +11,23 @@ echo "PYTHONPATH:"$PYTHONPATH
 
 
 
-
+function D1(){
 python caffe_to_tensorflow.py \
 --model_name=ssd_300_vgg \
 --num_classes=21 \
---caffemodel_path=ssddeploys/4_300/VGG_coco_SSD_300x300.caffemodel
+--caffemodel_path=./tmp/VGG_coco_SSD_300x300.caffemodel
+}
+
+
+function D2(){
+python caffe_to_tensorflow.py \
+--model_name=ssd_640_vgg \
+--num_classes=2 \
+--caffemodel_path=../SFD/model/SFD.caffemodel
+}
+
+
+D2
 
 
 
